@@ -1,0 +1,106 @@
+/* Third level attributes */
+
+.third-level
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level > li
+{
+    height: 30px;
+    background: #0C10E8;
+    border-radius: 0.5em;
+    border-style: solid;
+    text-align: center;
+}
+.third-level > li:hover 
+{ 
+	background: #0048FF; 
+}
+
+/* Second level attributes */
+.second-level
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level > li
+{
+    position: relative;
+    height: 30px;
+    background: #0C10E8;
+    border-radius: 0.5em;
+    border-style: solid;
+    text-align: center;
+}
+
+.second-level > li:hover 
+{ 
+	background: #0048FF; 
+}
+
+/* Top level attributes */
+.top-level
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #0C10E8;
+    border-radius: 0.5em;
+    border-style: solid;
+    text-align: center;
+}
+
+.top-level > li:hover 
+{ 
+	background: #0048FF; 
+}
+
+/* On hover, display the next level's menu */
+.top-level li.access:hover > ul
+{
+    display: inline;
+}
+
+
+/* Links attributes */
+
+/* Apply to all links inside the multi-level menu */
+.top-level a
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+
+.top-level a:hover 
+{ 
+	color: #000000; 
+}
