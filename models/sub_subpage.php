@@ -1,6 +1,6 @@
 <?php
-class Page extends Database{
-	public $tbl = 'pages';
+class Subsubpage extends Database{
+	public $tbl = 'sub_subpages';
 	
 	public function getAll(){
 		$str = " SELECT * FROM $this->tbl ";

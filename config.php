@@ -42,12 +42,29 @@ $curPage = substr($trim, 0, -4);
 
 require_once(ROOT_PATH .'/models/01database.php');
 require_once(ROOT_PATH . '/models/page.php');
+require_once(ROOT_PATH . '/models/subpage.php');
+require_once(ROOT_PATH . '/models/sub_subpage.php');
 require_once(ROOT_PATH . '/models/user.php');
 
 $page = new Page();
+$subpage = new Subpage();
+$sub_subpage = new Subsubpage();
+
 $pageInfo = $page->getCurrentPage($curPage);
+$allPages = $page->getAll();
+
+$allSubPages = $subpage->getAll();
+$subPageInfo = $subpage->getCurrentPage($curPage);
+
+$allSub_subPages = $sub_subpage->getAll();
+$sub_subPageInfo = $sub_subpage->getCurrentPage($curPage);
+
 $pageId = $pageInfo['id'];
+$subPageId = $subPageInfo['id'];
+$sub_subPageId = $sub_subPageInfo['id'];
 
 require_once(ROOT_PATH . '/imports/savepage.php');
+require_once(ROOT_PATH . '/imports/savesubpage.php');
+require_once(ROOT_PATH . '/imports/savesub_subpage.php');
 require_once(ROOT_PATH . '/imports/logout.php');
 ?>

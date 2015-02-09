@@ -15,7 +15,7 @@ require_once('../../imports/checkaccess.php');
 	}
 	require_once('../../imports/menudata.php'); ?>
 	<br><br>
-	<?php require_once('../../imports/pagebody.php');
+	<?php require_once('../../imports/subpagebody.php');
 	require_once('../../imports/savemsg.php'); ?>
 </body>
 </html>

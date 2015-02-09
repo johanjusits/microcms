@@ -5,10 +5,11 @@ if (!empty($_POST['title']) || !empty($_POST['body'])){
 	$newTitle = $_POST['title'];
 	$newBody = $_POST['body'];
 	$newAccess = $_POST['access'];
+	$table = "pages";
 	if ($curPage !== "index"){
-		$page->updatePage($curPage, $newTitle, $newBody, $pageId, $newAccess);
+		$page->updatePage($table, $curPage, $newTitle, $newBody, $pageId, $newAccess);
 	} else {
-		$page->updatePage($curPage, $newTitle, $newBody, $pageId);
+		$page->updatePage($table, $curPage, $newTitle, $newBody, $pageId);
 	} 
 	header("Location: /$curPage.php");
 	exit();
