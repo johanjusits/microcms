@@ -40,6 +40,7 @@ foreach($allPages as $singlePage){
 	$id = $singlePage['id'];
 	$name = $singlePage['menu_name'];
 	$url = $singlePage['url'];
+	$locked = $singlePage['locked'];
 	$singlePageSubs = array();
 	//Loops through the subpages array and checks if there's an ID match
 	foreach ($pageSubs as $subpage){
@@ -61,9 +62,9 @@ foreach($allPages as $singlePage){
 	//If the pages doesn't have any subpages, it adds the page to the menu without that element
 	if(empty($singlePageSubs))
 	{
-	    $aMenu[] = array("name" => $name, "url" => $url);
+	    $aMenu[] = array("name" => $name, "url" => $url, "locked" => $locked);
 	} else {
-		$aMenu[] = array("name" => $name, "url" => $url, "subpages" => $singlePageSubs);
+		$aMenu[] = array("name" => $name, "url" => $url, "locked" => $locked, "subpages" => $singlePageSubs);
 	}
 } 
 
@@ -76,8 +77,12 @@ foreach($allPages as $singlePage){
 		foreach ($aMenu as $page){ 
 		if (isset($_SESSION['email'])){ ?>
 			<li class="access"> <?php 
-		} else { ?>
-			<li class=""> <?php
+		} else {
+			if ($page['locked'] == "Yes"){ ?>
+				<li class="locked"> <?php
+			} else { ?>
+				<li class=""> <?php
+			} 
 		} ?>
 			<a href="<?php echo $page['url']; ?>"><?php echo $page['name']; ?></a>
 				<!--CHECKS IF LIST ITEM HAS SUB PAGES-->

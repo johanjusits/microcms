@@ -73,9 +73,43 @@
     text-align: center;
 }
 
-.top-level > li:hover 
+.top-level > li.locked
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #999999;
+    border-radius: 0.5em;
+    border-style: solid;
+    text-align: center;
+}
+
+.top-level > li.access
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #0C10E8;
+    border-radius: 0.5em;
+    border-style: solid;
+    text-align: center;
+}
+
+.top-level > li.access:hover 
 { 
 	background: #0048FF; 
+}
+
+.top-level > li.locked:hover 
+{ 
+    background: #999999;
+}
+
+.top-level > li:hover 
+{ 
+    background: #0048FF; 
 }
 
 /* On hover, display the next level's menu */
