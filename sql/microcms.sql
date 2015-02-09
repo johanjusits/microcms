@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 09 feb 2015 kl 20:39
+-- Tid vid skapande: 09 feb 2015 kl 21:29
 -- Serverversion: 5.6.20
 -- PHP-version: 5.5.15
 
@@ -43,9 +43,9 @@ CREATE TABLE IF NOT EXISTS `pages` (
 --
 
 INSERT INTO `pages` (`id`, `name`, `menu_name`, `title`, `body`, `locked`, `url`) VALUES
-(1, 'index', 'Index', 'Index', 'This is the Index page.\r\n', '', '/index.php'),
+(1, 'index', 'Index', 'Index', 'This is the Index page.\r\n', 'No', '/index.php'),
 (2, 'about', 'About', 'About', 'This is the about page.', 'No', '/about.php'),
-(3, 'blog', 'Blog', 'Blog', 'This is the blog page.', 'No', '/blog.php'),
+(3, 'blog', 'Blog', 'Blog', 'This is the blog page.', 'Yes', '/blog.php'),
 (4, 'portfolio', 'Portfolio', 'Portfolio', 'This is the portfolio page', 'No', '/portfolio.php'),
 (5, 'links', 'Links', 'Links', 'This is the links page.', 'No', '/links.php'),
 (15, 'candy', 'Candy', 'Free Candy', 'Come here for lots of candy!', 'Yes', '/candy.php');
